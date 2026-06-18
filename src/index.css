@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif;
+
+  /* Color Palette - Light Theme (Amazon Premium Classic) */
+  --bg-main: #eaeded;
+  --bg-nav: #131921;
+  --bg-subnav: #232f3e;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fcfcfc;
+  
+  --text-main: #0f1111;
+  --text-light: #565959;
+  --text-white: #ffffff;
+  
+  --color-accent: #febd69;
+  --color-accent-hover: #f3a847;
+  --color-accent-dark: #e47911;
+  --color-secondary: #007185;
+  --color-secondary-hover: #c45500;
+  --color-border: #dddddd;
+  
+  --rating-color: #ffa41c;
+  --badge-bg: #e2e8f0;
+  --badge-text: #475569;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --card-border-radius: 12px;
+  --input-border-radius: 6px;
+  
+  /* Scrollbar */
+  --scrollbar-bg: #f1f1f1;
+  --scrollbar-thumb: #c1c1c1;
+  --scrollbar-thumb-hover: #a8a8a8;
+}
+
+/* Dark Mode Theme Variables Override */
+.dark-theme {
+  --bg-main: #0b0f17;
+  --bg-nav: #0d121f;
+  --bg-subnav: #141c2f;
+  --bg-card: rgba(22, 30, 49, 0.7);
+  --bg-card-hover: rgba(22, 30, 49, 0.95);
+  
+  --text-main: #f1f5f9;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+  
+  --color-accent: #ffb74d;
+  --color-accent-hover: #ffa726;
+  --color-accent-dark: #fb8c00;
+  --color-secondary: #38bdf8;
+  --color-secondary-hover: #0ea5e9;
+  --color-border: #1e293b;
+  
+  --rating-color: #fbbf24;
+  --badge-bg: #1e293b;
+  --badge-text: #94a3b8;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary-hover);
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-primary);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-primary);
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Dark Mode Scrollbar override */
+.dark-theme ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
